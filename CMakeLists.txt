@@ -9,6 +9,7 @@ set(PROJECT_SOURCES
     src/main.cpp
     src/window.cpp
     src/game.cpp
+    src/pipe.cpp
 
     lib/glad/src/glad.c
     )

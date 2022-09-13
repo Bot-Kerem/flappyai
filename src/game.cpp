@@ -21,12 +21,11 @@ void Game::run(){
 
 
 void Game::build(){
-  //           Red   Green   Blue   Alpha
+  // Channels: Red   Green   Blue   Alpha
   glClearColor(1.0f, 1.0f,   1.0f,  1.0f); // White
 }
 
 Game::~Game(){
-
   // Destroy window
   window.destroy();
   Window::Terminate();

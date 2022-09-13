@@ -7,7 +7,6 @@
 
 class Game{
   private:
-
     const int Width = 800;
     const int Height = 600;
     const std::string Title = "Flappy Ai";
@@ -22,12 +21,12 @@ class Game{
 
     // Runs game
     void run();
+    // Prepares game
     void build();
-
     // Draws scene
     void draw();
 
     static void Init();
-};
+}; // class Game
 
 #endif // GAME_H
