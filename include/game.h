@@ -2,6 +2,8 @@
 #define GAME_H
 
 #include "window.h"
+#include "pipemanager.h"
+#include "bird.h"
 
 #include <string>
 
@@ -13,6 +15,11 @@ class Game{
 
     Window window{Title, Width, Height};
 
+    PipeManager pipemanager;
+    Bird bird;
+
+    float deltaTime{0};
+    float lastTime{0};
   public:
     // Game constructor
     Game() = default;

@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.23.3)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
+
 find_package(glfw3 REQUIRED)
 message("FIND GLFW AT: ${glfw3_DIR}")
 
@@ -10,6 +12,10 @@ set(PROJECT_SOURCES
     src/window.cpp
     src/game.cpp
     src/pipe.cpp
+    src/pipemanager.cpp
+    src/bird.cpp
+
+    src/shader.cpp
 
     lib/glad/src/glad.c
     )

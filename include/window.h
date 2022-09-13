@@ -29,6 +29,11 @@ class Window{
 
     // Terminates GLFW
     static void Terminate();
+
+    // Returns time
+    static double GetTime();
+
+    bool isPressedSpace();
 }; // class Window
 
 #endif // WINDOW_H

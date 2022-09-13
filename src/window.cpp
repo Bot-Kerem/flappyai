@@ -45,3 +45,11 @@ void Window::PollEvents(){
 void Window::Terminate(){
   glfwTerminate();
 }
+
+double Window::GetTime(){
+  return glfwGetTime();
+}
+
+bool Window::isPressedSpace(){
+  return glfwGetKey(m_Window, GLFW_KEY_SPACE) == GLFW_PRESS;
+}
