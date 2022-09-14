@@ -2,6 +2,7 @@
 #define BIRD_H
 
 #include "shader.h"
+#include "neuralnetwork.h"
 
 class Bird{
   private:
@@ -16,6 +17,8 @@ class Bird{
 
     const float xPosition = -0.8f;
     float yPosition = 0.0f;
+
+    NeuralNetwork<5, 2, 8> Brain{};
 
     void jump();
     void draw();

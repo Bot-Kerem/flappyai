@@ -14,7 +14,6 @@ set(PROJECT_SOURCES
     src/pipe.cpp
     src/pipemanager.cpp
     src/bird.cpp
-
     src/shader.cpp
 
     lib/glad/src/glad.c
