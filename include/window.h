@@ -33,7 +33,6 @@ class Window{
     // Returns time
     static double GetTime();
 
-    bool isPressedSpace();
 }; // class Window
 
 #endif // WINDOW_H

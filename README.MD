@@ -7,6 +7,6 @@ Flappy Bird Ai
 - [x] Pipes
 - [x] Bird
 - [x] Playable Game
-- [ ] Neural Network
-- [ ] Reinforcement Algorithm
+- [X] Neural Network
+- [ ] Mutate Neural Network
 - [ ] Implement to the bird

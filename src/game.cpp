@@ -21,24 +21,30 @@ void Game::run(){
     deltaTime = Window::GetTime() - lastTime;
     lastTime = Window::GetTime();
 
-    if(window.isPressedSpace()){
-      bird.jump();
-    }
-
     pipemanager.move(deltaTime);
     bird.move(deltaTime);
 
     draw();
 
     if(pipemanager.checkCollision(bird)){
-      std::cout << "Hit" << "\n";
+      //std::cout << "Hit" << "\n";
     }
 
+    Pipe& pipe = pipemanager.getClosest(bird);
+    auto Predict = bird.Brain.predict({
+      1.0f -(pipe.Height + pipe.PipeSpace),
+      1.0f - pipe.Height,
+      (pipe.Width + pipe.position) - bird.xPosition,
+      bird.yPosition,
+      bird.Velocity});
+
+      if(Predict[0] < Predict[1]){
+        bird.jump();
+      }
 
     window.swapBuffers();
   }
 }
-
 
 void Game::build(){
   // Channels: Red   Green   Blue   Alpha
