@@ -27,6 +27,7 @@ class PipeManager{
     void drawPipes();
 
     bool checkCollision(Bird& bird);
+    Pipe& getClosest(Bird& bird);
 }; // class PipeManager
 
 #endif // PIPE_MANAGER_H

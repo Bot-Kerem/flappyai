@@ -2,6 +2,8 @@
 
 #include <glad/glad.h>
 
+#include <iostream>
+
 const float gravity = -5.0f;
 
 Bird::Bird(){
@@ -24,4 +26,10 @@ void Bird::jump(){
 void Bird::move(float deltaTime){
   Velocity += deltaTime * gravity;
   yPosition += deltaTime * Velocity;
+  if(yPosition > 1){
+    yPosition = 1;
+  }
+  else if (yPosition < -1) {
+    yPosition = -1;
+  }
 }

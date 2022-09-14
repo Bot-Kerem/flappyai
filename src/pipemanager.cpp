@@ -41,3 +41,13 @@ void PipeManager::move(float deltaTime){
 bool PipeManager::checkCollision(Bird& bird){
   return (bird.xPosition > pipes[0]->position && bird.xPosition < (pipes[0]->position + pipes[0]->Width) && (bird.yPosition >= 1.0f - pipes[0]->Height || bird.yPosition <= 1.0f -(pipes[0]->Height + pipes[0]->PipeSpace)));
 }
+
+Pipe& PipeManager::getClosest(Bird& bird){
+  const float width =  pipes[0]->Width;
+  for (int i = 0; i < pipes.size(); i++) {
+    if(pipes[i]->position + width > bird.xPosition){
+      return *(pipes[i]);
+    }
+  }
+  return *(new Pipe{});
+}
